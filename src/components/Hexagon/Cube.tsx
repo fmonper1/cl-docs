@@ -1,8 +1,10 @@
 import React, { CSSProperties } from "react";
 import cubeStyles from "./Cube.module.css";
 
-export interface MyCustomCSS extends CSSProperties {
-  "--size": number;
+export interface CubeCSSProperties extends CSSProperties {
+  "--bg-color": string;
+  "--fill-color": string;
+  "--size": string;
   "--size-multiplier": number;
   "--radius-amount": number;
 }
@@ -18,77 +20,26 @@ export const Cube = ({
   color?: string;
   backgroundColor?: string;
 }) => {
-  const baseStyles = {
-    borderRadius: `${Math.round(size / BORDER_RADIUS_DIVISOR)}px`,
-    backgroundColor: color,
-  };
   return (
     <div
       id={cubeStyles.cubeWrapper}
       style={
         {
-          backgroundColor,
-          position: "relative",
-          height: `${size * CONTAINER_SIZE_MULTIPLIER}px`,
-          width: `${size * CONTAINER_SIZE_MULTIPLIER}px`,
-          mixBlendMode: "screen",
-          ["--size"]: size,
+          ["--bg-color"]: backgroundColor,
+          ["--fill-color"]: color,
+          ["--size"]: `${size}px`,
           ["--size-multiplier"]: CONTAINER_SIZE_MULTIPLIER,
           ["--radius-amount"]: BORDER_RADIUS_DIVISOR,
-        } as MyCustomCSS
+        } as CubeCSSProperties
       }
     >
-      <div
-        id={cubeStyles.wrapper}
-        style={{
-          transform: "rotateX(236deg) rotateZ(-135deg)",
-          width: size + "px",
-          height: size + "px",
-          position: "absolute",
-          transformStyle: "preserve-3d",
-          top: "44.5%",
-          left: "20%",
-        }}
-      >
-        <div
-          style={{
-            ...baseStyles,
-          }}
-        />
-        <div
-          style={{
-            ...baseStyles,
-            transform: `translateZ(-${size}px)`,
-          }}
-        />
-        <div
-          style={{
-            ...baseStyles,
-            transform: `rotateY(-90deg)`,
-            transformOrigin: "right",
-          }}
-        />
-        <div
-          style={{
-            ...baseStyles,
-            transform: `rotateX(-90deg)`,
-            transformOrigin: "top",
-          }}
-        />
-        <div
-          style={{
-            ...baseStyles,
-            transform: "rotateY(90deg)",
-            transformOrigin: "left",
-          }}
-        />
-        <div
-          style={{
-            ...baseStyles,
-            transform: "rotateX(90deg)",
-            transformOrigin: "bottom",
-          }}
-        />
+      <div id={cubeStyles.wrapper}>
+        <div id={cubeStyles.bottomCenter} className={cubeStyles.innerBox} />
+        <div id={cubeStyles.topCenter} className={cubeStyles.innerBox} />
+        <div id={cubeStyles.bottomLeft} className={cubeStyles.innerBox} />
+        <div id={cubeStyles.topLeft} className={cubeStyles.innerBox} />
+        <div id={cubeStyles.topRight} className={cubeStyles.innerBox} />
+        <div id={cubeStyles.bottomRight} className={cubeStyles.innerBox} />
       </div>
     </div>
   );
