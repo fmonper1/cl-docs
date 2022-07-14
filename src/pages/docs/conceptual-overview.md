@@ -3,7 +3,6 @@ layout: ../../layouts/MainLayout.astro
 section: gettingStarted
 date: Last Modified
 title: "Chainlink Overview"
-permalink: "docs/conceptual-overview/"
 excerpt: "Smart Contracts and Chainlink"
 whatsnext:
   {

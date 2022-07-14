@@ -49,60 +49,60 @@ export const SIDEBAR = {
       header: true,
     },
     {
-      title: "Overview",
-      url: "/docs/conceptual-overview/",
+      text: "Overview",
+      link: "docs/conceptual-overview/",
     },
     {
-      title: "Deploy Your First Contract",
-      url: "/docs/deploy-your-first-contract/",
+      text: "Deploy Your First Contract",
+      link: "docs/deploy-your-first-contract/",
     },
     {
-      title: "Consuming Data Feeds",
-      url: "/docs/consuming-data-feeds/",
+      text: "Consuming Data Feeds",
+      link: "docs/consuming-data-feeds/",
     },
     {
-      title: "Get Random Numbers",
-      url: "/docs/intermediates-tutorial/",
+      text: "Get Random Numbers",
+      link: "docs/intermediates-tutorial/",
     },
     {
-      title: "API Calls",
-      url: "/docs/advanced-tutorial/",
+      text: "API Calls",
+      link: "docs/advanced-tutorial/",
     },
     {
       text: "Resources",
       header: true,
     },
     {
-      title: "Videos and Tutorials",
-      url: "/docs/other-tutorials/",
+      text: "Videos and Tutorials",
+      link: "docs/other-tutorials/",
     },
     {
       text: "Next Steps",
       header: true,
     },
     {
-      title: "Chainlink Architecture",
-      url: "/docs/architecture-overview/",
+      text: "Chainlink Architecture",
+      link: "docs/architecture-overview/",
     },
     {
-      title: "Data Feeds",
-      url: "/docs/using-chainlink-reference-contracts/",
+      text: "Data Feeds",
+      link: "docs/using-chainlink-reference-contracts/",
     },
     {
-      title: "Chainlink VRF",
-      url: "/docs/chainlink-vrf/",
+      text: "Chainlink VRF",
+      link: "docs/chainlink-vrf/",
     },
     {
-      title: "Chainlink Keepers",
-      url: "/docs/chainlink-keepers/introduction/",
+      text: "Chainlink Keepers",
+      link: "docs/chainlink-keepers/introduction/",
     },
     {
-      title: "Connect to Public API Data",
-      url: "/docs/request-and-receive-data/",
+      text: "Connect to Public API Data",
+      link: "docs/request-and-receive-data/",
     },
     {
-      title: "Run a Chainlink Node",
-      url: "/chainlink-nodes/",
+      text: "Run a Chainlink Node",
+      link: "chainlink-nodes/",
     },
   ],
   ethereum: [
@@ -110,20 +110,20 @@ export const SIDEBAR = {
       section: "Overview",
     },
     {
-      title: "Chainlink Architecture",
-      url: "/docs/architecture-overview/",
+      text: "Chainlink Architecture",
+      link: "docs/architecture-overview/",
       children: [
         {
-          title: "Basic Request Model",
-          url: "/docs/architecture-request-model/",
+          text: "Basic Request Model",
+          link: "docs/architecture-request-model/",
         },
         {
-          title: "Decentralized Data Model",
-          url: "/docs/architecture-decentralized-model/",
+          text: "Decentralized Data Model",
+          link: "docs/architecture-decentralized-model/",
         },
         {
-          title: "Off-Chain Reporting",
-          url: "/docs/off-chain-reporting/",
+          text: "Off-Chain Reporting",
+          link: "docs/off-chain-reporting/",
         },
       ],
     },

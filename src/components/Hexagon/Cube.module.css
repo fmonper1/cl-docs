@@ -36,7 +36,7 @@
 }
 
 #topCenter {
-  transform: translateZ(var(--size));
+  transform: translateZ(-var(--size));
 }
 #topRight {
   transform: rotateY(90deg);
