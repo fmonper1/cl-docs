@@ -1,0 +1,9 @@
+---
+import { Code } from 'astro/components';
+
+const { src, lang } = Astro.props;
+const url = new URL(Astro.request.url);
+const data = await (await fetch(`${url.origin}${src}`)).text()
+---
+
+<Code code={data.toString()} lang={lang} />
