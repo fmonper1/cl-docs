@@ -23,9 +23,9 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 				</h1>
 			</a>
 		</div>
-		<div style="flex-grow: 1;"></div>
+		<div style="flex-grow: 0.5;"></div>
 		{CONFIG.MENU.en.map(link=> <a href={link.link}>{link.text}</a>)}
-		<div style="flex-grow: 1;"></div>
+		<div style="flex-grow: 0.5;"></div>
 
 		{KNOWN_LANGUAGE_CODES.length > 1 &&
 		<LanguageSelect lang={lang} client:idle />}
