@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/MainLayout.astro
+
 section: gettingStarted
 date: Last Modified
 title: "Consuming Data Feeds"

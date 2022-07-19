@@ -1,14 +1,19 @@
 ---
-layout: nodes.liquid
+layout: ../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
 title: "Introduction to Chainlink VRF"
 permalink: "docs/chainlink-vrf/"
-whatsnext: {"Get a Random Number":"/docs/get-a-random-number/", "Contract Addresses":"/docs/vrf-contracts/"}
+whatsnext:
+  {
+    "Get a Random Number": "/docs/get-a-random-number/",
+    "Contract Addresses": "/docs/vrf-contracts/",
+  }
 metadata:
   title: "Generate Random Numbers for Smart Contracts using Chainlink VRF"
   description: "Learn how to securely generate random numbers for your smart contract with Chainlink VRF (an RNG). This guide uses Solidity code examples."
 ---
+
 ![Chainlink](/files/a4c6c80-85d09b6-19facd8-banner.png)
 
 > ℹ️ You are viewing the VRF v2 guide.
@@ -102,17 +107,17 @@ Requests to Chainlink VRF v2 follow the [Request & Receive Data](/docs/request-a
 
 1. After the request is complete, the final gas cost is recorded based on how much gas is required for the verification and callback. The total gas cost in wei for your request uses the following formula:
 
-    ```
-    (Gas price * (Verification gas + Callback gas)) = total gas cost
-    ```
+   ```
+   (Gas price * (Verification gas + Callback gas)) = total gas cost
+   ```
 
 1. The total gas cost is converted to LINK using the ETH/LINK data feed. In the unlikely event that the data feed is unavailable, the VRF coordinator uses the `fallbackWeiPerUnitLink` value for the conversion instead. The `fallbackWeiPerUnitLink` value is defined in the [coordinator contract](/docs/vrf-contracts/#configurations) for your selected network.
 
 1. The LINK premium is added to the total gas cost. The premium is defined in the [coordinator contract](/docs/vrf-contracts/#configurations) with the `fulfillmentFlatFeeLinkPPMTier1` parameter in millionths of LINK.
 
-    ```
-    (total gas cost + LINK premium) = total request cost
-    ```
+   ```
+   (total gas cost + LINK premium) = total request cost
+   ```
 
 1. The total request cost is charged to your subscription balance.
 
@@ -127,9 +132,9 @@ Each subscription has the following limits:
 - Each subscription must maintain a minimum balance to fund requests from consumer contracts. If your balance is below that minimum, your requests remain pending for up to 24 hours before they expire. After you add sufficient LINK to a subscription, pending requests automatically process as long as they have not expired.
 - The minimum subscription balance must be sufficient for each new consumer contract that you add to a subscription. The required size of the minimum balance depends on the gas lane and the size of the request that the consumer contract makes. For example, a consumer contract that requests one random value will require a smaller minimum balance than a consumer contract that requests 50 random values. In general, you can estimate the required minimum LINK balance using the following formula where max verification gas is always 200,000.
 
-    ```
-    (((Gas lane maximum * (Max verification gas + Callback gas limit)) / (1,000,000,000 Gwei/ETH)) / (ETH/LINK price)) + LINK premium = Minimum LINK
-    ```
+  ```
+  (((Gas lane maximum * (Max verification gas + Callback gas limit)) / (1,000,000,000 Gwei/ETH)) / (ETH/LINK price)) + LINK premium = Minimum LINK
+  ```
 
 - Each subscription supports up to 100 consumer contracts. If you need more than 100 consumers, create multiple subscriptions.
 

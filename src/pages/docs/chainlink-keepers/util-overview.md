@@ -1,17 +1,14 @@
 ---
-layout: nodes.liquid
+layout: ../../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
-title: 'Keepers Utility Contracts'
-whatsnext:
-  {
-    'EthBalanceMonitor': '/docs/chainlink-keepers/utility-contracts/',
-  }
+title: "Keepers Utility Contracts"
+whatsnext: { "EthBalanceMonitor": "/docs/chainlink-keepers/utility-contracts/" }
 ---
 
 # Overview
 
-Utility contracts are tools to help developers quickly deploy Keepers for specific use-cases. This list will be updated as more utility contracts become available. 
+Utility contracts are tools to help developers quickly deploy Keepers for specific use-cases. This list will be updated as more utility contracts become available.
 
 # Current utility contracts
 

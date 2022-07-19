@@ -1,14 +1,15 @@
 ---
-layout: nodes.liquid
+layout: ../../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
-title: 'Introduction to Chainlink Keepers'
+title: "Introduction to Chainlink Keepers"
 whatsnext:
   {
-    'Make your contract Keepers-compatible': '/docs/chainlink-keepers/compatible-contracts/',
-    'Time-based automation': '/docs/chainlink-keepers/job-scheduler/',
+    "Make your contract Keepers-compatible": "/docs/chainlink-keepers/compatible-contracts/",
+    "Time-based automation": "/docs/chainlink-keepers/job-scheduler/",
   }
 ---
+
 ![Chainlink Keeper Network Banner](/images/contract-devs/generic-banner.png)
 
 Automate your smart contracts using **Chainlink Keepers**, the decentralized and highly reliable smart contract automation service. Relying on Chainlink Keepers will help you get to market faster and save gas by offloading expensive on-chain automation logic to our decentralized Keepers Network. To take full advantage of the Keepers automation infrastructure, read all of the documentation to understand the features of Chainlink Keepers.
@@ -17,11 +18,11 @@ To learn more about how the Chainlink Keepers Network automates your smart contr
 
 **Table of Contents**
 
-+ [Select a Trigger](#select-a-trigger)
-  + [Time-based Trigger](#time-based-trigger)
-  + [Custom Logic Trigger](#custom-logic-trigger)
-+ [Supported Networks and Costs](#supported-networks-and-costs)
-+ [Questions and Examples](#questions-and-examples)
+- [Select a Trigger](#select-a-trigger)
+  - [Time-based Trigger](#time-based-trigger)
+  - [Custom Logic Trigger](#custom-logic-trigger)
+- [Supported Networks and Costs](#supported-networks-and-costs)
+- [Questions and Examples](#questions-and-examples)
 
 ## Select a Trigger
 
@@ -36,9 +37,9 @@ Before you begin, deploy the contract that you want to automate. You will also n
 
 1. Open the Chainlink Keepers app.
 
-    <div class="remix-callout">
-        <a href="https://keepers.chain.link" >Open the Chainlink Keepers App</a>
-    </div>
+<div class="remix-callout">
+    <a href="https://keepers.chain.link" >Open the Chainlink Keepers App</a>
+</div>
 
 1. [Register](../register-upkeep/) a new Upkeep in the [Chainlink Keepers App](https://keepers.chain.link) and select a **Time-based** trigger. Provide the address of your deployed contract, provide the ABI if it is not verified, and choose the function that you want to automate with relevant inputs.
 
@@ -58,9 +59,9 @@ To use a custom logic trigger, you will need to make your contract [Keepers-comp
 
 1. Open the Chainlink Keepers app.
 
-    <div class="remix-callout">
-        <a href="https://keepers.chain.link" >Open the Chainlink Keepers App</a>
-    </div>
+<div class="remix-callout">
+    <a href="https://keepers.chain.link" >Open the Chainlink Keepers App</a>
+</div>
 
 1. [Register](../register-upkeep/) a new Upkeep in the [Chainlink Keepers App](https://keepers.chain.link) and select a **Custom logic** trigger. Provide the address of your contract and complete the remaining details. Your email will be encrypted, but the project name will be visible to all.
 
@@ -80,7 +81,7 @@ To use a custom logic trigger, you will need to make your contract [Keepers-comp
 
 ## Supported Networks and Costs
 
-For a list of blockchains that is supported by Chainlink Keepers, see the [Supported Networks](../supported-networks)  page. To learn more about the cost of using Chainlink Keepers, see the [Keepers Economics](../keeper-economics) page.
+For a list of blockchains that is supported by Chainlink Keepers, see the [Supported Networks](../supported-networks) page. To learn more about the cost of using Chainlink Keepers, see the [Keepers Economics](../keeper-economics) page.
 
 ## Questions and Examples
 

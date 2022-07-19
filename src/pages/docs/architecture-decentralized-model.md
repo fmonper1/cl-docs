@@ -1,15 +1,20 @@
 ---
-layout: nodes.liquid
+layout: ../../layouts/MainLayout.astro
+
 section: ethereum
 date: Last Modified
-title: 'Decentralized Data Model'
-permalink: 'docs/architecture-decentralized-model/'
-whatsnext: { 'Using Data Feeds': '/docs/get-the-latest-price/', 'Off-Chain Reporting': '/docs/off-chain-reporting/' }
+title: "Decentralized Data Model"
+permalink: "docs/architecture-decentralized-model/"
+whatsnext:
+  {
+    "Using Data Feeds": "/docs/get-the-latest-price/",
+    "Off-Chain Reporting": "/docs/off-chain-reporting/",
+  }
 metadata:
-  title: 'Chainlink Decentralised Data Model'
-  description: 'This page describes the decentralized architecture which enables Chainlink to aggregate data from multiple independent node operators.'
+  title: "Chainlink Decentralised Data Model"
+  description: "This page describes the decentralized architecture which enables Chainlink to aggregate data from multiple independent node operators."
   image:
-    0: '/files/OpenGraph_V3.png'
+    0: "/files/OpenGraph_V3.png"
 ---
 
 ## Overview

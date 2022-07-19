@@ -1,12 +1,9 @@
 ---
-layout: nodes.liquid
+layout: ../../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
-title: 'Chainlink Keepers Economics'
-whatsnext:
-  {
-    'FAQs': '/docs/chainlink-keepers/faqs/',
-  }
+title: "Chainlink Keepers Economics"
+whatsnext: { "FAQs": "/docs/chainlink-keepers/faqs/" }
 ---
 
 ## How Funding Works

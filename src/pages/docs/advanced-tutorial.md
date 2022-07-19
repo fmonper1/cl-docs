@@ -1,18 +1,18 @@
 ---
-layout: nodes.liquid
+layout: ../../layouts/MainLayout.astro
 section: gettingStarted
 date: Last Modified
-title: 'API Calls: Using Any API'
-permalink: 'docs/advanced-tutorial/'
-excerpt: 'Calling APIs from Smart Contracts'
+title: "API Calls: Using Any API"
+permalink: "docs/advanced-tutorial/"
+excerpt: "Calling APIs from Smart Contracts"
 whatsnext:
   {
-    'Make a GET Request': '/docs/make-a-http-get-request/',
-    'Make an Existing Job Request': '/docs/existing-job-request/',
+    "Make a GET Request": "/docs/make-a-http-get-request/",
+    "Make an Existing Job Request": "/docs/existing-job-request/",
   }
 metadata:
   image:
-    0: '/files/04b8e56-cl.png'
+    0: "/files/04b8e56-cl.png"
 ---
 
 > 👍 Requirements

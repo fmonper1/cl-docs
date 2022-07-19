@@ -1,23 +1,23 @@
 ---
-layout: nodes.liquid
+layout: ../../layouts/MainLayout.astro
 section: gettingStarted
 date: Last Modified
-title: 'Random Numbers: Using Chainlink VRF'
-permalink: 'docs/intermediates-tutorial/'
-excerpt: 'Using Chainlink VRF'
+title: "Random Numbers: Using Chainlink VRF"
+permalink: "docs/intermediates-tutorial/"
+excerpt: "Using Chainlink VRF"
 whatsnext:
   {
-    'Get a Random Number': '/docs/get-a-random-number/',
-    'Example Contracts': '/docs/chainlink-vrf/example-contracts/',
-    'Security Considerations': '/docs/vrf-security-considerations/',
-    'Best Practices': '/docs/chainlink-vrf-best-practices/',
-    'Contract Addresses': '/docs/vrf-contracts/',
+    "Get a Random Number": "/docs/get-a-random-number/",
+    "Example Contracts": "/docs/chainlink-vrf/example-contracts/",
+    "Security Considerations": "/docs/vrf-security-considerations/",
+    "Best Practices": "/docs/chainlink-vrf-best-practices/",
+    "Contract Addresses": "/docs/vrf-contracts/",
   }
 metadata:
-  title: 'Random Numbers: Using Chainlink VRF'
-  description: 'Learn how to use randomness in your smart contracts using Chainlink VRF.'
+  title: "Random Numbers: Using Chainlink VRF"
+  description: "Learn how to use randomness in your smart contracts using Chainlink VRF."
   image:
-    0: '/files/2a242f1-link.png'
+    0: "/files/2a242f1-link.png"
 ---
 
 > 👍 Requirements

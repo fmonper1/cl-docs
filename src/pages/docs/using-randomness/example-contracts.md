@@ -1,10 +1,16 @@
 ---
-layout: nodes.liquid
+layout: ../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
 title: "Example Contracts"
 permalink: "docs/chainlink-vrf/example-contracts/"
-whatsnext: {"Security Considerations":"/docs/vrf-security-considerations/", "Best Practices":"/docs/chainlink-vrf-best-practices/", "Migrating from VRF v1 to v2":"/docs/chainlink-vrf/migration-vrf-v1-v2/", "Contract Addresses":"/docs/vrf-contracts/"}
+whatsnext:
+  {
+    "Security Considerations": "/docs/vrf-security-considerations/",
+    "Best Practices": "/docs/chainlink-vrf-best-practices/",
+    "Migrating from VRF v1 to v2": "/docs/chainlink-vrf/migration-vrf-v1-v2/",
+    "Contract Addresses": "/docs/vrf-contracts/",
+  }
 metadata:
   description: "Example contracts for generating a random number inside a smart contract using Chainlink VRF."
 ---
@@ -55,7 +61,7 @@ To use this contract, compile and deploy it in Remix.
 
 1. Compile and deploy the contract using the Injected Web3 environment. The contract includes all of the configuration variables that you need, but you can edit them if necessary. For a full list of available configuration variables, see the [Contract Addresses](/docs/vrf-contracts/) page.
 
-    This contract automatically creates a new subscription when you deploy it. Read the `s_subscriptionId` variable to find your subscription ID. You can use this value to find the subscription in the [Subscription Manager](https://vrf.chain.link).
+   This contract automatically creates a new subscription when you deploy it. Read the `s_subscriptionId` variable to find your subscription ID. You can use this value to find the subscription in the [Subscription Manager](https://vrf.chain.link).
 
 1. In this example, the `topUpSubscription()` function sends LINK from your contract to the subscription. Fund your contract with at least three testnet LINK. Alternatively, you can send LINK directly to the subscription in the [Subscription Manager](https://vrf.chain.link). Any address can provide funding to a subscription balance. If you need testnet LINK, you can get it from one of the available [Rinkeby faucets](/docs/link-token-contracts/#rinkeby).
 
@@ -63,16 +69,16 @@ To use this contract, compile and deploy it in Remix.
 
 1. Create and deploy a consumer contract that includes the following components:
 
-    - The `requestRandomWords()` function and the required variables and your subscription ID
-    - The `fulfillRandomWords()` callback function
+   - The `requestRandomWords()` function and the required variables and your subscription ID
+   - The `fulfillRandomWords()` callback function
 
-    You can use the example from the [Get a Random Number](/docs/get-a-random-number/#analyzing-the-contract) guide.
+   You can use the example from the [Get a Random Number](/docs/get-a-random-number/#analyzing-the-contract) guide.
 
 1. After you deploy the consumer contract, add it to the subscription as an approved consumer using the `addConsumer()` function on your subscription manager contract. Specify the address of your consumer contract.
 
 1. On the consumer contract, run the `requestRandomWords()` function to request and receive random values. The request might take several minutes to process. Track pending request status in the [Subscription Manager](https://vrf.chain.link) app.
 
-    The consumer contract can continue to make requests until your subscription balance runs out. The subscription manager contract must maintain sufficient balance in the subscription so that the consumers can continue to operate.
+   The consumer contract can continue to make requests until your subscription balance runs out. The subscription manager contract must maintain sufficient balance in the subscription so that the consumers can continue to operate.
 
 1. When you are done with your contracts and the subscription, run the `cancelSubscription()` to close the subscription and send the remaining LINK to your wallet address. Specify the address of the receiving wallet.
 

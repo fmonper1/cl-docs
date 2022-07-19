@@ -1,5 +1,5 @@
 ---
-layout: nodes.liquid
+layout: ../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
 title: "VRF Best Practices"

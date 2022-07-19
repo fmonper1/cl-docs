@@ -1,22 +1,20 @@
 ---
-layout: nodes.liquid
+layout: ../../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
-title: 'Chainlink Keepers Job Scheduler'
+title: "Chainlink Keepers Job Scheduler"
 whatsnext:
-  {
-    'Custom logic automation': '/docs/chainlink-keepers/compatible-contracts/',
-  }
+  { "Custom logic automation": "/docs/chainlink-keepers/compatible-contracts/" }
 ---
 
 Learn how to register a contract with the Chainlink Keepers network and automate it using the Keepers job scheduler.
 
 **Table of Contents**
 
-+ [Register a new Upkeep](#register-a-new-upkeep)
-+ [Trigger Selection](#trigger-selection)
-+ [Using Time-Based Triggers](#using-time-based-triggers)
-+ [Using Custom Logic Triggers](#using-custom-logic-triggers)
+- [Register a new Upkeep](#register-a-new-upkeep)
+- [Trigger Selection](#trigger-selection)
+- [Using Time-Based Triggers](#using-time-based-triggers)
+- [Using Custom Logic Triggers](#using-custom-logic-triggers)
 
 # Register a new Upkeep
 
@@ -43,7 +41,7 @@ To learn how to create Keeper-compatible contracts, see [Making Keepers-compatib
 
 # Using Time-Based Triggers
 
-When you select the time-based trigger, you are prompted to enter a *contract address*. This is the address of the deployed contract that contains the function that you want Keepers to execute. If you did not verify the contract on chain, you will also need to paste the [Application Binary Interface](https://docs.soliditylang.org/en/develop/abi-spec.html) (ABI) of the deployed contract into the corresponding text box.
+When you select the time-based trigger, you are prompted to enter a _contract address_. This is the address of the deployed contract that contains the function that you want Keepers to execute. If you did not verify the contract on chain, you will also need to paste the [Application Binary Interface](https://docs.soliditylang.org/en/develop/abi-spec.html) (ABI) of the deployed contract into the corresponding text box.
 
 ![Keepers Time Based Trigger](/images/contract-devs/keeper/keeper-time-based-trigger.png)
 

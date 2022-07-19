@@ -1,5 +1,5 @@
 ---
-layout: nodes.liquid
+layout: ../../layouts/MainLayout.astro
 section: legacy
 date: Last Modified
 title: "VRF Best Practices [v1]"

@@ -1,10 +1,15 @@
 ---
-layout: nodes.liquid
+layout: ../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
 title: "Basic Request Model"
 permalink: "docs/architecture-request-model/"
-whatsnext: {"Make a GET Request":"/docs/make-a-http-get-request/", "Decentralized Data Model":"/docs/architecture-decentralized-model/", "Off-Chain Reporting":"/docs/off-chain-reporting/"}
+whatsnext:
+  {
+    "Make a GET Request": "/docs/make-a-http-get-request/",
+    "Decentralized Data Model": "/docs/architecture-decentralized-model/",
+    "Off-Chain Reporting": "/docs/off-chain-reporting/",
+  }
 metadata:
   title: "Chainlink Basic Request Model"
 ---

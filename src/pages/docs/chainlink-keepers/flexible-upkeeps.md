@@ -1,9 +1,13 @@
 ---
-layout: nodes.liquid
+layout: ../../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
-title: 'Making flexible, secure, and low-cost contracts'
-whatsnext: { 'Utility Contracts': '/docs/chainlink-keepers/util-overview/', 'FAQs': '/docs/chainlink-keepers/faqs/' }
+title: "Making flexible, secure, and low-cost contracts"
+whatsnext:
+  {
+    "Utility Contracts": "/docs/chainlink-keepers/util-overview/",
+    "FAQs": "/docs/chainlink-keepers/faqs/",
+  }
 ---
 
 In this guide, you will learn how the flexibility of [Chainlink Keepers](https://chain.link/keepers) enables important design patterns that reduce gas fees, enhance the resilience of dApps, and improve end-user experience. Smart contracts themselves cannot self-trigger their functions at arbitrary times or under arbitrary conditions. Transactions can only be initiated by another account.
@@ -80,7 +84,7 @@ Test this example using the following steps:
 In this example, the `performUpkeep()` function used **2,481,379** gas. This example has two main issues:
 
 - All computation is done in `performUpkeep()`. This is a state modifying function which leads to high gas consumption.
-- This example is simple, but looping over large arrays with state updates can cause the transaction to hit the gas limit of the [network](../supported-networks), which prevents `performUpkeep` from running successfully.  
+- This example is simple, but looping over large arrays with state updates can cause the transaction to hit the gas limit of the [network](../supported-networks), which prevents `performUpkeep` from running successfully.
 
 To reduce these gas fees and avoid running out of gas, you can make some simple changes to the contract.
 
@@ -121,19 +125,19 @@ Run this example to compare the gas fees:
 
 1. After the registration is confirmed, the three upkeeps run:
 
-   ![BalancerOffChain1 History](/images/contract-devs/keeper/balancerOffChain1-history.png 'balancerOffChainSubset1')
+   ![BalancerOffChain1 History](/images/contract-devs/keeper/balancerOffChain1-history.png "balancerOffChainSubset1")
 
-   ![BalancerOffChain2 History](/images/contract-devs/keeper/balancerOffChain2-history.png 'balancerOffChainSubset2')
+   ![BalancerOffChain2 History](/images/contract-devs/keeper/balancerOffChain2-history.png "balancerOffChainSubset2")
 
-   ![BalancerOffChain3 History](/images/contract-devs/keeper/balancerOffChain3-history.png 'balancerOffChainSubset3')
+   ![BalancerOffChain3 History](/images/contract-devs/keeper/balancerOffChain3-history.png "balancerOffChainSubset3")
 
 1. Click each transaction hash to see the details of each transaction in Etherscan. Find the gas used by each of the upkeep transactions:
 
-   ![BalancerOffChain1 Gas](/images/contract-devs/keeper/balancerOffChain1-gas.png 'balancerOffChainSubset1')
+   ![BalancerOffChain1 Gas](/images/contract-devs/keeper/balancerOffChain1-gas.png "balancerOffChainSubset1")
 
-   ![BalancerOffChain2 Gas](/images/contract-devs/keeper/balancerOffChain2-gas.png 'balancerOffChainSubset2')
+   ![BalancerOffChain2 Gas](/images/contract-devs/keeper/balancerOffChain2-gas.png "balancerOffChainSubset2")
 
-   ![BalancerOffChain3 Gas](/images/contract-devs/keeper/balancerOffChain3-gas.png 'balancerOffChainSubset3')
+   ![BalancerOffChain3 Gas](/images/contract-devs/keeper/balancerOffChain3-gas.png "balancerOffChainSubset3")
 
 In this example the total gas used by each `performUpkeep()` function was 133,464 + 133,488 + 133,488 = **400,440**. This is an improvement of about 84% compared to the previous example, which used **2,481,379** gas.
 

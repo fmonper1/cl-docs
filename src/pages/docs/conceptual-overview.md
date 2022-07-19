@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/MainLayout.astro
+
 section: gettingStarted
 date: Last Modified
 title: "Chainlink Overview"
@@ -14,8 +15,6 @@ metadata:
   description: "Learn the basic concepts about what smart contracts are and, how to write them, and how Chainlink oracles work with smart contracts."
   image:
     0: "/files/1a63254-link.png"
-setup: |
-  import CodeSample from '../../components/CodeSample/CodeSample.astro'
 ---
 
 Welcome to the Smart Contract Getting Started guide. This overview explains the basic concepts of smart contract development and oracle networks.
@@ -26,9 +25,7 @@ To get your hands on the code right away, you can skip this overview:
 - [Deploy Your First Smart Contract](/docs/deploy-your-first-contract/): If you are new to smart contracts, deploy your first smart contract in an interactive web development environment.
 - [Learn how to use Data Feeds](/docs/consuming-data-feeds/): If you are already familiar with smart contracts and want to learn how to create _hybrid_ smart contracts, use Chainlink Data Feeds to get asset price data on-chain.
 
-<p>
-  https://www.youtube.com/watch?v=rFXSEEQG9YE
-</p>
+<YouTube id="https://www.youtube.com/watch?v=rFXSEEQG9YE" />
 
 ## Table of Contents
 

@@ -1,10 +1,13 @@
 ---
-layout: nodes.liquid
+layout: ../../../layouts/MainLayout.astro
 section: ethereum
 date: Last Modified
-title: 'Manage your Upkeeps'
+title: "Manage your Upkeeps"
 whatsnext:
-  { 'Build flexible contracts': '/docs/chainlink-keepers/flexible-upkeeps/', 'FAQ': '/docs/chainlink-keepers/faqs/' }
+  {
+    "Build flexible contracts": "/docs/chainlink-keepers/flexible-upkeeps/",
+    "FAQ": "/docs/chainlink-keepers/faqs/",
+  }
 ---
 
 ## Overview

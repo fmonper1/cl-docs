@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/MainLayout.astro
+
 section: ethereum
 date: Last Modified
 title: "Contract Addresses"
